@@ -22,5 +22,13 @@ function sf_child_theme_dequeue_style() {
 /**
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
+function themeslug_setup() {
+     /**
+      * Add theme support for the Eventbrite API plugin.
+      * See: https://wordpress.org/plugins/eventbrite-api/
+      */
+     add_theme_support( 'eventbrite' );
+ }
+ add_action( 'after_setup_theme', 'themeslug_setup' );
 
 
